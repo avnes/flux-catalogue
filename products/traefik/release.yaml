@@ -18,6 +18,9 @@ spec:
     remediation:
       retries: 3
   values:
+    deployment:
+      enabled: true
+      kind: DaemonSet
     ingressRoute:
       dashboard:
         enabled: true
