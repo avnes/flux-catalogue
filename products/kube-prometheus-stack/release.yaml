@@ -17,3 +17,10 @@ spec:
   install:
     remediation:
       retries: 3
+  values:
+    defaultRules:
+      rules:
+        etcd: false
+        kubeScheduler: false
+    alertmanager:
+      enabled: false
