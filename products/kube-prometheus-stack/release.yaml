@@ -24,3 +24,11 @@ spec:
         kubeScheduler: false
     alertmanager:
       enabled: false
+    kubeEtcd:
+      enabled: false
+    kubeScheduler:
+      enabled: false
+    kubeControllerManager:
+      enabled: false
+    kubeProxy:
+      enabled: false
