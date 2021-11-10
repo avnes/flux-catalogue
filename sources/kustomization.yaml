@@ -5,3 +5,4 @@ resources:
   - traefik.yaml
   - prometheus-community.yaml
   - kubernetes-dashboard.yaml
+  - fluent-bit.yaml
