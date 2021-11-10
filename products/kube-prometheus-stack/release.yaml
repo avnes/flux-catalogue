@@ -32,3 +32,20 @@ spec:
       enabled: false
     kubeProxy:
       enabled: false
+    prometheus:
+      additionalServiceMonitors:
+        - name: "monitoring-metrics"
+          additionalLabels:
+            release: monitoring
+          selector:
+            matchLabels:
+              scrape-service-metrics: "true"
+          namespaceSelector:
+            any: true
+          endpoints:
+            - path: /metrics
+              port: metrics
+            - path: /metrics
+              port: admin
+            - path: /metrics
+              port: http
