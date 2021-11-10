@@ -17,38 +17,3 @@ spec:
   install:
     remediation:
       retries: 3
-  values:
-    alertmanager:
-      enabled: false
-    defaultRules:
-      rules:
-        etcd: false
-        kubeScheduler: false
-    grafana:
-      ingress:
-        enabled: false
-    kubeEtcd:
-      enabled: false
-    kubeScheduler:
-      enabled: false
-    kubeControllerManager:
-      enabled: false
-    kubeProxy:
-      enabled: false
-    prometheus:
-      additionalServiceMonitors:
-        - name: "monitoring-metrics"
-          additionalLabels:
-            release: monitoring
-          selector:
-            matchLabels:
-              scrape-service-metrics: "true"
-          namespaceSelector:
-            any: true
-          endpoints:
-            - path: /metrics
-              port: metrics
-            - path: /metrics
-              port: admin
-            - path: /metrics
-              port: http
