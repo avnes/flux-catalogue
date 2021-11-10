@@ -34,8 +34,6 @@ spec:
     prometheus:
       additionalServiceMonitors:
         - name: "monitoring-metrics"
-          additionalLabels:
-            release: monitoring
           selector:
             matchLabels:
               scrape-service-metrics: "true"
