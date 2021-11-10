@@ -5,7 +5,6 @@ metadata:
   name: kubernetes-dashboard
   namespace: kubernetes-dashboard
 spec:
-  releaseName: kubernetes-dashboard
   chart:
     spec:
       chart: kubernetes-dashboard

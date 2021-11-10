@@ -5,7 +5,6 @@ metadata:
   name: traefik
   namespace: traefik
 spec:
-  releaseName: traefik
   chart:
     spec:
       chart: traefik
