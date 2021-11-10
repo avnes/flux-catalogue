@@ -5,7 +5,6 @@ metadata:
   name: prometheus-blackbox-exporter
   namespace: monitoring
 spec:
-  releaseName: prometheus-blackbox-exporter
   chart:
     spec:
       chart: prometheus-blackbox-exporter
