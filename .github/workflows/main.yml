@@ -3,8 +3,14 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - '.github/**'
   pull_request:
     types: [opened, synchronize, reopened]
+    branches:
+      - main
+    paths-ignore:
+      - '.github/**'
 jobs:
   sonarcloud:
     name: SonarCloud
