@@ -10,3 +10,4 @@ resources:
   - grafana.yaml
   - ww-gitops.yaml
   - bitnami.yaml
+  - vmware-tanzu.yaml
