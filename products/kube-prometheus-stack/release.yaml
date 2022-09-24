@@ -55,7 +55,7 @@ spec:
         metrics:
           enabled: true
         server:
-          domain: k0s-controlplane
-          root_url: http://k0s-controlplane/grafana
+          domain: grafana.develix.local
+          root_url: http://grafana.develix.local/
       plugins:
         - grafana-polystat-panel
