@@ -33,8 +33,16 @@ spec:
     ports:
       traefik:
         expose: true
+      web:
+        nodePort: 38000
       websecure:
         expose: true
+        nodePort: 34430
+      metrics:
+        port: 9100
+        expose: true
+        exposedPort: 9100
+        protocol: TCP
     globalArguments:
       - "--global.checknewversion"
       - "--entryPoints.web.forwardedHeaders.insecure"
@@ -50,4 +58,7 @@ spec:
           statuscodes: "300-399,400-499,500-599"
     providers:
       kubernetesIngress:
-        enabled: false
+        enabled: true
+    metrics:
+      prometheus:
+        entryPoint: metrics
