@@ -33,6 +33,7 @@ spec:
     ports:
       traefik:
         expose: true
+        nodePort: 39000
       web:
         nodePort: 38000
       websecure:
