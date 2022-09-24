@@ -18,7 +18,7 @@ spec:
       retries: 3
   values:
     grafana:
-      enabled: false
+      enabled: true
     write:
       persistence:
         size: 2Gi
