@@ -16,3 +16,8 @@ spec:
   install:
     remediation:
       retries: 3
+  values:
+    extraArgs:
+      - --enable-skip-login
+    serviceMonitor:
+      enabled: true
