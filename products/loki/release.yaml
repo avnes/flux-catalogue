@@ -27,7 +27,7 @@ spec:
         size: 5Gi
       service:
         labels:
-          - scrape-service-metrics: "true"
+          scrape-service-metrics: "true"
       serviceMonitor:
         enabled: true
         interval: 15s
