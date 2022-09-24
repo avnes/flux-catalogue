@@ -18,13 +18,14 @@ spec:
       retries: 3
   values:
     grafana:
-      enabled: true
-    write:
-      persistence:
-        size: 2Gi
-    read:
-      persistence:
-        size: 2Gi
-    singleBinary:
-      persistence:
-        size: 2Gi
+      enabled: false
+    loki:
+      write:
+        persistence:
+          size: 2Gi
+      read:
+        persistence:
+          size: 2Gi
+      singleBinary:
+        persistence:
+          size: 2Gi
