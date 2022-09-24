@@ -46,6 +46,8 @@ spec:
               port: admin
             - path: /metrics
               port: http
+            - path: /metrics
+              port: http-metrics
     grafana:
       grafana.ini:
         auth.anonymous:
