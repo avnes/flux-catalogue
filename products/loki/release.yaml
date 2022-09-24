@@ -25,3 +25,5 @@ spec:
         accessModes:
         - ReadWriteOnce
         size: 2Gi
+      serviceMonitor:
+        enabled: true
