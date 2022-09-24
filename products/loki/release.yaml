@@ -27,5 +27,5 @@ spec:
         size: 2Gi
       serviceMonitor:
         enabled: true
-        additionalLabels:
+        labels:
           release: "prometheus"
