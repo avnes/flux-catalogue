@@ -9,3 +9,4 @@ resources:
   - longhorn.yaml
   - grafana.yaml
   - ww-gitops.yaml
+  - bitnami.yaml
