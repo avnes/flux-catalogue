@@ -28,4 +28,6 @@ spec:
       serviceMonitor:
         enabled: true
         labels:
-          release: "prometheus"
+          prometheus.io/path: /metrics
+          prometheus.io/port: "3100"
+          prometheus.io/scrape: "true"
