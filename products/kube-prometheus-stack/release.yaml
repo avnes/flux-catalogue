@@ -46,3 +46,14 @@ spec:
               port: admin
             - path: /metrics
               port: http
+    grafana:
+      grafana.ini:
+        auth.anonymous:
+          enabled: true
+        metrics:
+          enabled: true
+        server:
+          domain: k0s-controlplane
+          root_url: http://k0s-controlplane/grafana
+      plugins:
+        - grafana-polystat-panel
