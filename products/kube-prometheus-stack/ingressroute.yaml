@@ -1,0 +1,20 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: "Host(`k0s-controlplane`) && PathPrefix(`/grafana`)"
+      middlewares:
+        - name: svc-grafana-prefix
+          namespace: monitoring
+      kind: Rule
+      services:
+        - kind: Service
+          name: kube-prometheus-stack-grafana
+          namespace: monitoring
+          port: 80
