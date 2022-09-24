@@ -18,3 +18,10 @@ spec:
           name: minio
           namespace: minio-system
           port: 9001
+    - match: "Host(`minio.develix.local`) && Path(`/`)"
+      kind: Rule
+      services:
+        - kind: Service
+          name: minio
+          namespace: minio-system
+          port: 9001
