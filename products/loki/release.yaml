@@ -25,12 +25,3 @@ spec:
         accessModes:
         - ReadWriteOnce
         size: 2Gi
-      write:
-        persistence:
-          size: 2Gi
-      read:
-        persistence:
-          size: 2Gi
-      singleBinary:
-        persistence:
-          size: 2Gi
