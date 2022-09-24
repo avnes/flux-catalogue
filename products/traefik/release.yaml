@@ -34,7 +34,7 @@ spec:
       traefik:
         expose: true
       websecure:
-        expose: false
+        expose: true
     globalArguments:
       - "--global.checknewversion"
       - "--entryPoints.web.forwardedHeaders.insecure"
