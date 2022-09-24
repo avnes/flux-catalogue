@@ -19,8 +19,11 @@ spec:
       passwordHash: $2a$12$hV9c8CoX4f8K3b8HvD0r3OJ7qTey91HUu2CyuYOi8UNZAsWfdH0ZO
     ingress:
       enabled: true
+      annotations:
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/rewrite-target: /$2
       hosts:
         - host: k0s-controlplane
           paths:
-            - path: /weave-gitops/
+            - path: /weave-gitops(/|$)(.*)
               pathType: Prefix
