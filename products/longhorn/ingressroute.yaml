@@ -10,9 +10,9 @@ spec:
   routes:
     - match: "HostRegexp(`{domain:.+}`) && PathPrefix(`/longhorn`)"
       middlewares:
-        - name: svc-longhorn-headers
+        - name: custom-request-headers
           namespace: longhorn-system
-        - name: svc-longhorn-prefix
+        - name: strip-prefix
           namespace: longhorn-system
       kind: Rule
       services:

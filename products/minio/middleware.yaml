@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: svc-minio-prefix
+  name: strip-prefix
   namespace: minio-system
 spec:
   stripPrefix:

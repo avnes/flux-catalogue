@@ -10,7 +10,7 @@ spec:
   routes:
     - match: "Host(`k0s-controlplane`) && PathPrefix(`/grafana`)"
       middlewares:
-        - name: svc-grafana-prefix
+        - name: strip-prefix
           namespace: monitoring
       kind: Rule
       services:

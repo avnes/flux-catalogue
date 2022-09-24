@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: svc-longhorn-headers
+  name: custom-request-headers
   namespace: longhorn-system
 spec:
   headers:
@@ -12,7 +12,7 @@ spec:
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: svc-longhorn-prefix
+  name: strip-prefix
   namespace: longhorn-system
 spec:
   stripPrefix:
