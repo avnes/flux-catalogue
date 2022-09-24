@@ -25,10 +25,9 @@ spec:
         accessModes:
           - ReadWriteOnce
         size: 5Gi
+      service:
+        labels:
+          - scrape-service-metrics: "true"
       serviceMonitor:
         enabled: true
-        labels:
-          prometheus.io/path: /metrics
-          prometheus.io/port: "3100"
-          prometheus.io/scrape: "true"
-          scrape-service-metrics: "true"
+        interval: 15s
