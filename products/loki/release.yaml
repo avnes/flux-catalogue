@@ -20,6 +20,11 @@ spec:
     grafana:
       enabled: false
     loki:
+      persistence:
+        enabled: true
+        accessModes:
+        - ReadWriteOnce
+        size: 2Gi
       write:
         persistence:
           size: 2Gi
