@@ -31,3 +31,4 @@ spec:
           prometheus.io/path: /metrics
           prometheus.io/port: "3100"
           prometheus.io/scrape: "true"
+          scrape-service-metrics: "true"
