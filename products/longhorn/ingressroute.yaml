@@ -19,7 +19,7 @@ spec:
         - name: longhorn-frontend
           namespace: longhorn-system
           port: 80
-    - match: "Host(`longhorn.develix.local`)"
+    - match: "Host(`longhorn.anyops.dev`)"
       middlewares:
         - name: custom-request-headers
           namespace: longhorn-system
