@@ -4,5 +4,3 @@ kind: Kustomization
 namespace: monitoring
 resources:
   - release.yaml
-  #- middleware.yaml
-  #- ingressroute.yaml

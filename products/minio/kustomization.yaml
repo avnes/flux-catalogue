@@ -5,5 +5,3 @@ namespace: minio-system
 resources:
   - namespace.yaml
   - release.yaml
-  #- middleware.yaml
-  #- ingressroute.yaml
