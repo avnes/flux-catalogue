@@ -56,6 +56,6 @@ spec:
           enabled: true
         server:
           domain: grafana.develix.local
-          root_url: http://grafana.develix.local/
+          root_url: http://grafana.anyops.dev/
       plugins:
         - grafana-polystat-panel
