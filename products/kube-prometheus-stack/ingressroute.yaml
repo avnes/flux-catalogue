@@ -18,14 +18,14 @@ spec:
           name: kube-prometheus-stack-grafana
           namespace: monitoring
           port: 80
-    - match: "Host(`grafana.develix.local`)"
+    - match: "Host(`grafana.anyops.dev`)"
       kind: Rule
       services:
         - kind: Service
           name: kube-prometheus-stack-grafana
           namespace: monitoring
           port: 80
-    - match: "Host(`prometheus.develix.local`)"
+    - match: "Host(`prometheus.anyops.dev`)"
       kind: Rule
       services:
         - kind: Service
