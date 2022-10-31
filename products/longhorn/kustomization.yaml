@@ -6,4 +6,4 @@ resources:
   - namespace.yaml
   - release.yaml
   - middleware.yaml
-  - ingressroute.yaml
+  #- ingressroute.yaml
