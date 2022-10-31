@@ -55,7 +55,7 @@ spec:
         metrics:
           enabled: true
         server:
-          domain: grafana.anyops.dev
-          root_url: http://grafana.anyops.dev/
+          domain: grafana.anyops.site
+          root_url: http://grafana.anyops.site/
       plugins:
         - grafana-polystat-panel
