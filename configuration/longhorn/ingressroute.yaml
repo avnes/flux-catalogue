@@ -1,0 +1,30 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: longhorn
+  namespace: longhorn-system
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: "HostRegexp(`{domain:.+}`) && PathPrefix(`/longhorn`)"
+      middlewares:
+        - name: custom-request-headers
+          namespace: longhorn-system
+        - name: strip-prefix
+          namespace: longhorn-system
+      kind: Rule
+      services:
+        - name: longhorn-frontend
+          namespace: longhorn-system
+          port: 80
+    - match: "Host(`longhorn.anyops.dev`)"
+      middlewares:
+        - name: custom-request-headers
+          namespace: longhorn-system
+      kind: Rule
+      services:
+        - name: longhorn-frontend
+          namespace: longhorn-system
+          port: 80
