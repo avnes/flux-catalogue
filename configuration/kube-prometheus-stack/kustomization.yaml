@@ -5,4 +5,4 @@ namespace: monitoring
 resources:
   - middleware.yaml
   - ingressroute.yaml
-  - loki-datasource.yaml
+  #- loki-datasource.yaml
