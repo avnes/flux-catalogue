@@ -4,10 +4,7 @@ kind: Kustomization
 resources:
   - traefik.yaml
   - prometheus-community.yaml
-  - kubernetes-dashboard.yaml
-  - fluent-bit.yaml
   - longhorn.yaml
   - grafana.yaml
-  - ww-gitops.yaml
   - bitnami.yaml
   - vmware-tanzu.yaml
