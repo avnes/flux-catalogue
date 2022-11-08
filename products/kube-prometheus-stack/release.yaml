@@ -49,6 +49,21 @@ spec:
             - path: /metrics
               port: http-metrics
     grafana:
+      datasources:
+        datasources.yaml:
+          apiVersion: 1
+          datasources:
+            - name: Prometheus
+              type: prometheus
+              access: proxy
+              url: http://kube-prometheus-stack-prometheus:9090
+              isDefault: true
+            - name: Loki
+              type: loki
+              access: proxy
+              url: http://loki:3100
+              jsonData:
+                maxLines: 1000
       grafana.ini:
         auth.anonymous:
           enabled: true
