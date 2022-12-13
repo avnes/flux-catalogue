@@ -1,0 +1,105 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: traefik
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: flux-catalogue
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/traefik"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: longhorn
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: traefik
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/longhorn"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: minio
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: longhorn
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/minio"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: velero
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: minio
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/velero"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: loki
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: longhorn
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/loki"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: kube-prometheus-stack
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: longhorn
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/kube-prometheus-stack"
+  prune: true
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: blackbox-exporter
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: kube-prometheus-stack
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-catalogue
+  path: "./apps/blackbox-exporter"
+  prune: true
