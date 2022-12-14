@@ -8,3 +8,4 @@ resources:
   - grafana.yaml
   - bitnami.yaml
   - vmware-tanzu.yaml
+  - chaoskube.yaml
