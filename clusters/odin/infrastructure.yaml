@@ -6,11 +6,11 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: flux-catalogue
+    - name: catalogue
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/traefik"
   prune: true
   validation: client
@@ -26,7 +26,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/longhorn"
   prune: true
   validation: client
@@ -42,7 +42,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/minio"
   prune: true
   validation: client
@@ -58,7 +58,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/velero"
   prune: true
   validation: client
@@ -74,7 +74,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/loki"
   prune: true
   validation: client
@@ -90,7 +90,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/kube-prometheus-stack"
   prune: true
   validation: client
@@ -106,7 +106,7 @@ spec:
   interval: 1m0s
   sourceRef:
     kind: GitRepository
-    name: flux-catalogue
+    name: catalogue
   path: "./infrastructure/blackbox-exporter"
   prune: true
   validation: client
