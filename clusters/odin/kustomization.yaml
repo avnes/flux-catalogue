@@ -9,3 +9,4 @@ resources:
   - loki-stack.yaml
   - kube-prometheus-stack.yaml
   - blackbox-exporter.yaml
+  - dnsutils.yaml
