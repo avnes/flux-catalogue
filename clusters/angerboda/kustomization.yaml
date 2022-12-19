@@ -7,3 +7,4 @@ resources:
   #-  redis.yaml
   - chaoskube.yaml
   - dnsutils.yaml
+  - weave-scope.yaml
