@@ -16,6 +16,6 @@ spec:
   install:
     remediation:
       retries: 3
-   values:
-     persistence:
-       defaultFsType: xfs
+  values:
+    persistence:
+      defaultFsType: xfs
