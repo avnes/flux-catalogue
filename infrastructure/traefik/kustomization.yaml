@@ -4,5 +4,7 @@ kind: Kustomization
 namespace: traefik
 resources:
   - namespace.yaml
+  - secret-sops-encrypted.yaml
   - release.yaml
   - service.yaml
+  - middleware.yaml

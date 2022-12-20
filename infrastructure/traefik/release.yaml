@@ -23,6 +23,9 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
+        matchRule: Host(`traefik.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
+        entryPoints: ["traefik", "web"]
+        middlewares: ["traefik-dashboard-auth"]
     service:
       enabled: true
       type: NodePort
