@@ -27,6 +27,7 @@ spec:
         entryPoints: ["traefik", "web"]
         middlewares:
           - name: "traefik-dashboard-auth"
+            namespace: traefik
     service:
       enabled: true
       type: NodePort
