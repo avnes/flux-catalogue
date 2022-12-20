@@ -7,3 +7,4 @@ resources:
   #-  redis.yaml
   - chaoskube.yaml
   - dnsutils.yaml
+  - external-dns.yaml
