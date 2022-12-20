@@ -8,7 +8,7 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: "Host(`k0s-controlplane.anyops.site`) && PathPrefix(`/grafana`)"
+    - match: "Host(`odin.anyops.site`) && PathPrefix(`/grafana`)"
       middlewares:
         - name: strip-prefix
           namespace: monitoring
