@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: minio-system
 resources:
   - namespace.yaml
+  - secret-sops-encrypted.yaml
   - release.yaml
   - middleware.yaml
   - ingressroute.yaml
