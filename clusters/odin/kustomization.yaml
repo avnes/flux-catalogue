@@ -11,4 +11,4 @@ resources:
   - blackbox-exporter.yaml
   - dnsutils.yaml
   - weave-scope.yaml
-  - external-dns
+  - external-dns.yaml
