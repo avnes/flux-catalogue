@@ -25,7 +25,8 @@ spec:
         enabled: true
         matchRule: Host(`traefik.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
         entryPoints: ["traefik", "web"]
-        middlewares: ["traefik-dashboard-auth"]
+        middlewares:
+          - name: "traefik-dashboard-auth"
     service:
       enabled: true
       type: NodePort
