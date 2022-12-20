@@ -12,3 +12,4 @@ resources:
   - dnsutils.yaml
   - weave-scope.yaml
   - external-dns.yaml
+  - redis.yaml

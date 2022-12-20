@@ -1,0 +1,20 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: redis
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: infrastructure
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: catalogue
+  path: "./infrastructure/redis"
+  prune: true
+  validation: client
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
