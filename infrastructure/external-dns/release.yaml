@@ -17,6 +17,22 @@ spec:
     remediation:
       retries: 3
   values:
+    txtOwnerId: anyops
+    replicas: 1
+    sources:
+      - ingress
+      - services
     provider: digitalocean
     digitalocean:
       secretName: external-dns
+    domainFilters:
+      - anyops.site
+      - anyops.dev
+    logLevel: debug
+    policy: sync
+    resources:
+      limits:
+        memory: 64Mi
+      requests:
+        memory: 64Mi
+        cpu: 10m
