@@ -66,6 +66,7 @@ spec:
       kubernetesIngress:
         enabled: true
         ingressEndpoint:
+          ip: 192.168.1.203
           publishedService: "traefik/traefik"
     metrics:
       prometheus:
