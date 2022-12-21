@@ -18,9 +18,22 @@ spec:
       retries: 3
   values:
     master:
+      persistence:
+        enabled: true
+        mountPath: /data
+        accessModes:
+          - ReadWriteOnce
+        size: 2Gi
       service:
         type: LoadBalancer
         annotations:
           external-dns.alpha.kubernetes.io/hostname: "redis.anyops.site"
+    replica:
+      persistence:
+        enabled: true
+        mountPath: /data
+        accessModes:
+          - ReadWriteOnce
+        size: 2Gi
     auth:
       existingSecret: redis-auth
