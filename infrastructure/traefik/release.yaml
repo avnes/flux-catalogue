@@ -65,6 +65,8 @@ spec:
     providers:
       kubernetesIngress:
         enabled: true
+        ingressEndpoint:
+          publishedService: "traefik/traefik"
     metrics:
       prometheus:
         entryPoint: metrics
