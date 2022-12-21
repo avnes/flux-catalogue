@@ -14,3 +14,19 @@ spec:
   path: "./infrastructure/metallb"
   prune: true
   validation: client
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: metallb-config
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: metallb
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: catalogue
+  path: "./clusters/odin/config"
+  prune: true
+  validation: client
