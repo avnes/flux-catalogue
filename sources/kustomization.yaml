@@ -9,3 +9,4 @@ resources:
   - bitnami.yaml
   - vmware-tanzu.yaml
   - chaoskube.yaml
+  - metallb.yaml
