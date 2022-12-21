@@ -31,19 +31,16 @@ spec:
     service:
       enabled: true
       type: LoadBalancer
+      annotations:
+        external-dns.alpha.kubernetes.io/hostname: "traefik.anyops.site"
       labels:
         scrape-service-metrics: "true"
-      spec:
-        externalTrafficPolicy: Cluster
     ports:
       traefik:
         expose: true
-        nodePort: 32090
       web:
-        nodePort: 32080
       websecure:
         expose: true
-        nodePort: 32443
       metrics:
         port: 9100
         expose: true
