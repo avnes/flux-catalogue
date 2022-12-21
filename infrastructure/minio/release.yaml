@@ -17,6 +17,10 @@ spec:
     remediation:
       retries: 3
   values:
+    ingress:
+      enabled: true
+      hostname: minio.anyops.site
+      tls: false
     persistence:
       enabled: true
       mountPath: /data
