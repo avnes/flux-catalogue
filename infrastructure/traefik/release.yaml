@@ -30,7 +30,7 @@ spec:
             namespace: traefik
     service:
       enabled: true
-      type: NodePort
+      type: LoadBalancer
       labels:
         scrape-service-metrics: "true"
       spec:
