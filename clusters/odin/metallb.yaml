@@ -1,0 +1,28 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: metallb
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: infrastructure
+  interval: 1m0s
+  sourceRef:
+    kind: GitRepository
+    name: catalogue
+  path: "./infrastructure/metallb"
+  prune: true
+  validation: client
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: odin-pool
+  namespace: metallb-system
+spec:
+  addresses:
+    - 192.168.1.200/29
+    - 192.168.1.208/28
+    - 192.168.1.224/28
+    - 192.168.1.240/32
