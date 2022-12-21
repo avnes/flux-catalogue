@@ -21,10 +21,6 @@ spec:
       service:
         type: LoadBalancer
         annotations:
-          external-dns.alpha.kubernetes.io/hostname: "redis-master.anyops.site"
-    replica:
-      service:
-        type: LoadBalancer
-        external-dns.alpha.kubernetes.io/hostname: "redis.anyops.site"
+          external-dns.alpha.kubernetes.io/hostname: "redis.anyops.site"
     auth:
       existingSecret: redis-auth
