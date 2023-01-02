@@ -4,3 +4,5 @@ kind: Kustomization
 resources:
   - chaoskube.yaml
   - dnsutils.yaml
+  - traefik.yaml
+  - longhorn.yaml
