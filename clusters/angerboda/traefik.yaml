@@ -45,7 +45,7 @@ spec:
                 scrape-service-metrics: "true"
               spec:
                 externalTrafficPolicy: Cluster
-              type: LoadBalancer
+              type: NodePort
       target:
         kind: HelmRelease
         name: traefik
