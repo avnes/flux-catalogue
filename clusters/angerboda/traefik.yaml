@@ -29,22 +29,10 @@ spec:
           values:
             ingressRoute:
               dashboard:
-                enabled: true
-                entryPoints:
-                - traefik
-                - web
                 matchRule: Host(`traefik.angerboda.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
-                middlewares:
-                - name: traefik-dashboard-auth
-                  namespace: traefik
             service:
               annotations:
                 external-dns.alpha.kubernetes.io/hostname: traefik.angerboda.anyops.site
-              enabled: true
-              labels:
-                scrape-service-metrics: "true"
-              spec:
-                externalTrafficPolicy: Cluster
               type: NodePort
       target:
         kind: HelmRelease
