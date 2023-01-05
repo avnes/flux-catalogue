@@ -10,7 +10,7 @@ spec:
       chart: external-dns
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: external-dns
         namespace: flux-system
   interval: 1m0s
   install:
@@ -18,7 +18,6 @@ spec:
       retries: 3
   values:
     txtOwnerId: anyops
-    replicas: 1
     sources:
       - ingress
       - service
