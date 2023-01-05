@@ -18,3 +18,35 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
+  patches:
+    - patch: |-
+        apiVersion: helm.toolkit.fluxcd.io/v2beta1
+        kind: HelmRelease
+        metadata:
+          name: traefik
+          namespace: traefik
+        spec:
+          values:
+            ingressRoute:
+              dashboard:
+                enabled: true
+                entryPoints:
+                - traefik
+                - web
+                matchRule: Host(`traefik.angerboda.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
+                middlewares:
+                - name: traefik-dashboard-auth
+                  namespace: traefik
+            service:
+              annotations:
+                external-dns.alpha.kubernetes.io/hostname: traefik.angerboda.anyops.site
+              enabled: true
+              labels:
+                scrape-service-metrics: "true"
+              spec:
+                externalTrafficPolicy: Cluster
+              type: LoadBalancer
+      target:
+        kind: HelmRelease
+        name: traefik
+        namespace: traefik
