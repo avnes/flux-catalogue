@@ -6,3 +6,4 @@ resources:
   - dnsutils.yaml
   - traefik.yaml
   - longhorn.yaml
+  - external-dns.yaml
