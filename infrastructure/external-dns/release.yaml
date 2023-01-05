@@ -24,6 +24,13 @@ spec:
     provider: digitalocean
     digitalocean:
       secretName: external-dns
+    env:
+      - name: DO_TOKEN
+        valueFrom:
+          secretKeyRef:
+            name: external-dns
+            key: digitalocean_api_token
+            optional: false
     domainFilters:
       - anyops.site
       - anyops.dev
