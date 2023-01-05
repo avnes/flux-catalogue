@@ -25,7 +25,7 @@ spec:
           values:
             ingress:
               enabled: true
-              host: longhorn.anyops.site
+              host: longhorn.angerboda.anyops.site
               tls: false
       target:
         kind: HelmRelease
