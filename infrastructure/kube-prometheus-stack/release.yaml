@@ -69,7 +69,7 @@ spec:
         passwordKey: admin-password
       grafana.ini:
         auth.anonymous:
-          enabled: true
+          enabled: false
         metrics:
           enabled: true
         server:
