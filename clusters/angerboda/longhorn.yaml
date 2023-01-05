@@ -15,10 +15,14 @@ spec:
   prune: true
   validation: client
   patches:
-    - patch: |
-        - op: replace
-          path: /spec/rules/0/host
-          value: longhorn.angerboda.anyops.site
+    - patch: |-
+        apiVersion: networking.k8s.io/v1
+        kind: Ingress
+        metadata:
+          name: longhorn-ingress
+        spec:
+          rules:
+            - host: longhorn.angerboda.anyops.site
       target:
         kind: Ingress
         name: longhorn-ingress
