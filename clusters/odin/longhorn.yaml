@@ -14,3 +14,20 @@ spec:
   path: "./infrastructure/longhorn"
   prune: true
   validation: client
+  patches:
+    - patch: |-
+        apiVersion: helm.toolkit.fluxcd.io/v2beta1
+        kind: HelmRelease
+        metadata:
+          name: longhorn
+          namespace: longhorn-system
+        spec:
+          values:
+            ingress:
+              enabled: true
+              host: longhorn.odin.anyops.site
+              tls: false
+      target:
+        kind: HelmRelease
+        name: longhorn
+        namespace: longhorn-system

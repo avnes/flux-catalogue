@@ -18,3 +18,23 @@ spec:
     provider: sops
     secretRef:
       name: sops-age
+  patches:
+    - patch: |-
+        apiVersion: helm.toolkit.fluxcd.io/v2beta1
+        kind: HelmRelease
+        metadata:
+          name: traefik
+          namespace: traefik
+        spec:
+          values:
+            ingressRoute:
+              dashboard:
+                matchRule: Host(`traefik.odin.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
+            service:
+              annotations:
+                external-dns.alpha.kubernetes.io/hostname: traefik.odin.anyops.site
+              type: NodePort
+      target:
+        kind: HelmRelease
+        name: traefik
+        namespace: traefik
