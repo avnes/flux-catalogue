@@ -14,21 +14,3 @@ spec:
   path: "./infrastructure/loki-stack"
   prune: true
   validation: client
-  patches:
-    - patch: |-
-        apiVersion: helm.toolkit.fluxcd.io/v2beta1
-        kind: HelmRelease
-        metadata:
-          name: loki
-          namespace: loki-system
-        spec:
-          values:
-            persistence:
-              enabled: true
-              accessModes:
-                - ReadWriteOnce
-              size: 1Gi
-      target:
-        kind: HelmRelease
-        name: loki
-        namespace: loki-system
