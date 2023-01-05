@@ -28,3 +28,5 @@ spec:
       enabled: true
       host: longhorn.anyops.site
       tls: false
+    defaultSettings:
+      deletingConfirmationFlag: false
