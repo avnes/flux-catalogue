@@ -27,6 +27,12 @@ spec:
           namespace: monitoring
         spec:
           values:
+            prometheus:
+              ingress:
+                enabled: true
+                hosts:
+                  - prometheus.angerboda.anyops.site
+                tls: []
             grafana:
               ingress:
                 enabled: true

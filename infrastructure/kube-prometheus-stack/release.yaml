@@ -32,12 +32,11 @@ spec:
     kubeProxy:
       enabled: false
     prometheus:
-      server:
-        ingress:
-          enabled: true
-          hosts:
-            - prometheus.example.tld
-          tls: []
+      ingress:
+        enabled: true
+        hosts:
+          - prometheus.example.tld
+        tls: []
       additionalServiceMonitors:
         - name: "monitoring-metrics"
           selector:
