@@ -34,6 +34,7 @@ spec:
               annotations:
                 external-dns.alpha.kubernetes.io/hostname: traefik.angerboda.anyops.site
                 metallb.universe.tf/address-pool: lb-pool
+              type: NodePort
       target:
         kind: HelmRelease
         name: traefik
