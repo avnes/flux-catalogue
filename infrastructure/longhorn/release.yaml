@@ -28,7 +28,5 @@ spec:
       enabled: true
       host: longhorn.example.tld
       tls: false
-      annotations:
-        external-dns.alpha.kubernetes.io/target: "angerboda.anyops.site"
     defaultSettings:
       deletingConfirmationFlag: true

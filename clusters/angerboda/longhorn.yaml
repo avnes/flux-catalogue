@@ -27,6 +27,8 @@ spec:
               enabled: true
               host: longhorn.angerboda.anyops.site
               tls: false
+              annotations:
+                external-dns.alpha.kubernetes.io/target: angerboda.anyops.site
       target:
         kind: HelmRelease
         name: longhorn
