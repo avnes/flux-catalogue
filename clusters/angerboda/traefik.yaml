@@ -27,9 +27,6 @@ spec:
           namespace: traefik
         spec:
           values:
-            ingressRoute:
-              dashboard:
-                matchRule: Host(`traefik.angerboda.anyops.site`) && PathPrefix(`/api`, `/dashboard`)
             service:
               annotations:
                 external-dns.alpha.kubernetes.io/hostname: traefik.angerboda.anyops.site
