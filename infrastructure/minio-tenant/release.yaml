@@ -33,3 +33,7 @@ spec:
         enabled: true
         port: 9000
         protocol: http
+    ingress:
+      console:
+        enabled: true
+        host: minio-tenant-console.example.tld
