@@ -10,3 +10,4 @@ resources:
   - blackbox-exporter.yaml
   - kube-prometheus-stack.yaml
   - loki-stack.yaml
+  - metallb.yaml

@@ -1,0 +1,9 @@
+---
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: lb-pool
+  namespace: metallb-system
+spec:
+  addresses:
+    - 130.61.138.157/32
