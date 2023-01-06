@@ -28,6 +28,11 @@ spec:
         spec:
           values:
             grafana:
+              ingress:
+                enabled: true
+                hosts:
+                  - grafana.angerboda.anyops.site
+                tls: []
               grafana.ini:
                 server:
                   domain: grafana.angerboda.anyops.site

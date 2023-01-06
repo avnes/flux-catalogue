@@ -32,6 +32,12 @@ spec:
     kubeProxy:
       enabled: false
     prometheus:
+      server:
+        ingress:
+          enabled: true
+          hosts:
+            - prometheus.example.tld
+          tls: []
       additionalServiceMonitors:
         - name: "monitoring-metrics"
           selector:
@@ -67,6 +73,11 @@ spec:
         existingSecret: "grafana-auth"
         userKey: admin-user
         passwordKey: admin-password
+      ingress:
+        enabled: true
+        hosts:
+          - grafana.example.tld
+        tls: []
       grafana.ini:
         auth.anonymous:
           enabled: false
