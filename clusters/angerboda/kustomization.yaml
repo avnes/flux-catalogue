@@ -12,4 +12,3 @@ resources:
   - loki-stack.yaml
   - metallb.yaml
   - minio-operator.yaml
-  - minio-tenant.yaml
