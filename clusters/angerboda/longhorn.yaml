@@ -29,10 +29,6 @@ spec:
           values:
             ingress:
               enabled: false
-              host: longhorn.angerboda.anyops.site
-              tls: false
-              annotations:
-                external-dns.alpha.kubernetes.io/target: traefik.angerboda.anyops.site
       target:
         kind: HelmRelease
         name: longhorn
