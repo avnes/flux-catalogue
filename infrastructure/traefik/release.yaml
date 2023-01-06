@@ -43,7 +43,7 @@ spec:
         nodePort: 32090
       web:
         expose: true
-        nodePort: 32080
+        nodePort: 80
       websecure:
         expose: true
         nodePort: 32443
