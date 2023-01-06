@@ -33,7 +33,6 @@ spec:
             service:
               annotations:
                 external-dns.alpha.kubernetes.io/hostname: traefik.odin.anyops.site
-              type: NodePort
       target:
         kind: HelmRelease
         name: traefik
