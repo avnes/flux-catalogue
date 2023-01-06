@@ -39,7 +39,7 @@ spec:
         externalTrafficPolicy: Local
     ports:
       traefik:
-        expose: false
+        expose: true
         nodePort: 32090
       web:
         expose: true
