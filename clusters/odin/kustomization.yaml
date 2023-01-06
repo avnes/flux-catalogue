@@ -5,7 +5,7 @@ resources:
   - metallb.yaml
   - traefik.yaml
   - longhorn.yaml
-  - minio.yaml
+  - minio-operator.yaml
   - velero.yaml
   - loki-stack.yaml
   - kube-prometheus-stack.yaml
