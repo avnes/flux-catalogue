@@ -4,5 +4,4 @@ kind: Kustomization
 namespace: longhorn-system
 resources:
   - namespace.yaml
-  - secret-sops-encrypted.yaml
   - release.yaml
