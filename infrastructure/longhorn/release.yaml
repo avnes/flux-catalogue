@@ -26,7 +26,7 @@ spec:
       defaultFsType: xfs
     ingress:
       enabled: true
-      host: longhorn.anyops.site
+      host: longhorn.example.tld
       tls: false
     defaultSettings:
       deletingConfirmationFlag: true

@@ -17,7 +17,7 @@ spec:
     remediation:
       retries: 3
   values:
-    txtOwnerId: anyops
+    txtOwnerId: example-tld
     sources:
       - ingress
       - service
@@ -32,8 +32,7 @@ spec:
             key: digitalocean_api_token
             optional: false
     domainFilters:
-      - anyops.site
-      - anyops.dev
+      - example.tld
     logLevel: debug
     policy: sync
     resources:

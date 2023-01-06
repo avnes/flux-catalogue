@@ -26,6 +26,9 @@ spec:
         spec:
           values:
             txtOwnerId: angerboda-anyops
+            domainFilters:
+            - anyops.site
+            - anyops.dev
       target:
         kind: HelmRelease
         name: external-dns

@@ -73,7 +73,7 @@ spec:
         metrics:
           enabled: true
         server:
-          domain: grafana.anyops.site
-          root_url: http://grafana.anyops.site/
+          domain: grafana.example.tld
+          root_url: http://grafana.example.tld/
       plugins:
         - grafana-polystat-panel

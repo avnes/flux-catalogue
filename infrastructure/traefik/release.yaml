@@ -23,7 +23,7 @@ spec:
     ingressRoute:
       dashboard:
         enabled: true
-        matchRule: "Host(`traefik.anyops.site`) && PathPrefix(`/api`, `/dashboard`)"
+        matchRule: "Host(`traefik.example.tld`) && PathPrefix(`/api`, `/dashboard`)"
         entryPoints: ["traefik", "web"]
         middlewares:
           - name: "traefik-dashboard-auth"
@@ -32,7 +32,7 @@ spec:
       enabled: true
       type: LoadBalancer
       annotations:
-        external-dns.alpha.kubernetes.io/hostname: "traefik.anyops.site"
+        external-dns.alpha.kubernetes.io/hostname: "traefik.example.tld"
       labels:
         scrape-service-metrics: "true"
       spec:

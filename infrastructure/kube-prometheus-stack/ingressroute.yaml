@@ -8,24 +8,14 @@ spec:
   entryPoints:
     - web
   routes:
-    - match: "Host(`odin.anyops.site`) && PathPrefix(`/grafana`)"
-      middlewares:
-        - name: strip-prefix
-          namespace: monitoring
+    - match: "Host(`grafana.example.tld`)"
       kind: Rule
       services:
         - kind: Service
           name: kube-prometheus-stack-grafana
           namespace: monitoring
           port: 80
-    - match: "Host(`grafana.anyops.site`)"
-      kind: Rule
-      services:
-        - kind: Service
-          name: kube-prometheus-stack-grafana
-          namespace: monitoring
-          port: 80
-    - match: "Host(`prometheus.anyops.site`)"
+    - match: "Host(`prometheus.example.tld`)"
       kind: Rule
       services:
         - kind: Service
