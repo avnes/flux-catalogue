@@ -29,12 +29,7 @@ spec:
           values:
             prometheus:
               ingress:
-                enabled: true
-                hosts:
-                  - prometheus.angerboda.anyops.site
-                tls: []
-                annotations:
-                  external-dns.alpha.kubernetes.io/target: traefik.angerboda.anyops.site
+                enabled: false
             grafana:
               ingress:
                 enabled: true
