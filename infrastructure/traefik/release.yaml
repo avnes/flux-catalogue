@@ -35,6 +35,8 @@ spec:
         external-dns.alpha.kubernetes.io/hostname: "traefik.example.tld"
       labels:
         scrape-service-metrics: "true"
+      spec:
+        externalTrafficPolicy: Cluster
     ports:
       traefik:
         expose: true
