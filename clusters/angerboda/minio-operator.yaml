@@ -28,8 +28,8 @@ spec:
                 enabled: true
                 host: minio-console.angerboda.anyops.site
                 tls: []
-              annotations:
-                external-dns.alpha.kubernetes.io/target: traefik.angerboda.anyops.site
+                annotations:
+                  external-dns.alpha.kubernetes.io/target: traefik.angerboda.anyops.site
       target:
         kind: HelmRelease
         name: minio-operator
