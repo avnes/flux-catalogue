@@ -33,12 +33,16 @@ spec:
                 hosts:
                   - prometheus.angerboda.anyops.site
                 tls: []
+                annotations:
+                  external-dns.alpha.kubernetes.io/target: angerboda.anyops.site
             grafana:
               ingress:
                 enabled: true
                 hosts:
                   - grafana.angerboda.anyops.site
                 tls: []
+                annotations:
+                  external-dns.alpha.kubernetes.io/target: angerboda.anyops.site
               grafana.ini:
                 server:
                   domain: grafana.angerboda.anyops.site
