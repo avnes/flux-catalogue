@@ -34,7 +34,7 @@ spec:
                   - prometheus.odin.anyops.site
                 tls: []
                 annotations:
-                  external-dns.alpha.kubernetes.io/target: odin.anyops.site
+                  external-dns.alpha.kubernetes.io/target: traefik.odin.anyops.site
             grafana:
               ingress:
                 enabled: true
@@ -42,7 +42,7 @@ spec:
                   - grafana.odin.anyops.site
                 tls: []
                 annotations:
-                  external-dns.alpha.kubernetes.io/target: odin.anyops.site
+                  external-dns.alpha.kubernetes.io/target: traefik.odin.anyops.site
               grafana.ini:
                 server:
                   domain: grafana.odin.anyops.site
