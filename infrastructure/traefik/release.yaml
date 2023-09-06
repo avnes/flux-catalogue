@@ -75,6 +75,6 @@ spec:
         entryPoint: metrics
         service:
           enabled: true
-        ServiceMonitor:
+        serviceMonitor:
           jobLabel: traefik
           honorLabels: true
