@@ -77,7 +77,4 @@ spec:
           enabled: true
         ServiceMonitor:
           jobLabel: traefik
-          endpoints:
-            - port: metrics
-              path: /metrics
-              honorLabels: true
+          honorLabels: true
