@@ -11,4 +11,3 @@ resources:
   - kube-prometheus-stack.yaml
   - loki-stack.yaml
   - metallb.yaml
-  - minio-operator.yaml
