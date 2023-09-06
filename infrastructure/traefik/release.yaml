@@ -73,3 +73,5 @@ spec:
     metrics:
       prometheus:
         entryPoint: metrics
+        service:
+          enabled: true
