@@ -12,10 +12,6 @@ spec:
         kind: HelmRepository
         name: chaoskube
         namespace: flux-system
-  values:
-    metrics:
-      serviceMonitor:
-        enabled: true
   interval: 1m0s
   install:
     remediation:
