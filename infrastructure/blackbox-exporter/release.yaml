@@ -15,6 +15,14 @@ spec:
   values:
     serviceMonitor:
       enabled: true
+      selfMonitor:
+        enabled: true
+        additionalMetricsRelabels: {}
+        additionalRelabeling: []
+        labels: {}
+        path: /metrics
+        interval: 30s
+        scrapeTimeout: 30s
   interval: 1m0s
   install:
     remediation:
