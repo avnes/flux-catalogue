@@ -12,6 +12,10 @@ spec:
         kind: HelmRepository
         name: metallb
         namespace: flux-system
+  values:
+    prometheus:
+      serviceMonitor:
+        enabled: true
   interval: 1m0s
   install:
     remediation:
