@@ -13,6 +13,9 @@ spec:
         name: prometheus-community
         namespace: flux-system
   values:
+    service:
+      labels:
+        scrape-service-metrics: "true"
     serviceMonitor:
       enabled: true
       selfMonitor:
