@@ -12,6 +12,9 @@ spec:
         kind: HelmRepository
         name: prometheus-community
         namespace: flux-system
+  values:
+    serviceMonitor:
+      enabled: true
   interval: 1m0s
   install:
     remediation:
