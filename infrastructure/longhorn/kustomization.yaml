@@ -5,4 +5,4 @@ namespace: longhorn-system
 resources:
   - namespace.yaml
   - release.yaml
-  #- servicemonitor.yaml
+  - servicemonitor.yaml
