@@ -23,7 +23,7 @@ spec:
       persistence:
         enabled: true
         accessModes:
-          - ReadWriteOncePod
+          - ReadWriteOnce
         size: 5Gi
       service:
         labels:
