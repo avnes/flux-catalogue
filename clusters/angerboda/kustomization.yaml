@@ -8,6 +8,6 @@ resources:
   - longhorn.yaml
   - external-dns.yaml
   - blackbox-exporter.yaml
-  #- kube-prometheus-stack.yaml
-  #- loki-stack.yaml
+  - kube-prometheus-stack.yaml
+  - loki-stack.yaml
   - metallb.yaml
