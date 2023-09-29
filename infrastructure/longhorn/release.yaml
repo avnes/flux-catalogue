@@ -23,7 +23,7 @@ spec:
       manager:
         type: ClusterIP
     persistence:
-      defaultFsType: xfs
+      defaultFsType: ext4
     ingress:
       enabled: true
       host: longhorn.example.tld
