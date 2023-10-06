@@ -20,6 +20,19 @@ spec:
     grafana:
       enabled: true
       defaultDashboardsEnabled: true
+      ingress:
+        enabled: true
+        hosts:
+          - grafana.example.tld
+        tls: []
+      grafana.ini:
+        auth.anonymous:
+          enabled: false
+        metrics:
+          enabled: true
+        server:
+          domain: grafana.example.tld
+          root_url: http://grafana.example.tld/
     prometheus:
       enabled: true
       isDefault: false
