@@ -18,7 +18,11 @@ spec:
       retries: 3
   values:
     grafana:
-      enabled: false
+      enabled: true
+      defaultDashboardsEnabled: true
+    prometheus:
+      enabled: true
+      isDefault: false
     loki:
       persistence:
         enabled: true
