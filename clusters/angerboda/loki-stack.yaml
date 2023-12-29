@@ -27,14 +27,14 @@ spec:
               ingress:
                 enabled: true
                 hosts:
-                  - loki.angerboda.anyops.site
+                  - grafana.angerboda.anyops.site
                 tls: []
                 annotations:
                   external-dns.alpha.kubernetes.io/target: traefik.angerboda.anyops.site
               grafana.ini:
                 server:
-                  domain: loki.angerboda.anyops.site
-                  root_url: http://loki.angerboda.anyops.site/
+                  domain: grafana.angerboda.anyops.site
+                  root_url: http://grafana.angerboda.anyops.site/
       target:
         kind: HelmRelease
         name: loki
