@@ -7,7 +7,6 @@ resources:
   - longhorn.yaml
   - velero.yaml
   - loki-stack.yaml
-  - kube-prometheus-stack.yaml
   - blackbox-exporter.yaml
   - dnsutils.yaml
   - weave-scope.yaml

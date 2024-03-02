@@ -6,7 +6,7 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: kube-prometheus-stack
+    - name: loki-stack
   interval: 1m0s
   sourceRef:
     kind: GitRepository

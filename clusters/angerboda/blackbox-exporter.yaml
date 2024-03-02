@@ -5,8 +5,8 @@ metadata:
   name: blackbox-exporter
   namespace: flux-system
 spec:
-  #dependsOn:
-  #  - name: kube-prometheus-stack
+  dependsOn:
+    - name: loki-stack
   interval: 1m0s
   sourceRef:
     kind: GitRepository
