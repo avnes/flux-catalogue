@@ -11,4 +11,5 @@ resources:
   - chaoskube.yaml
   - metallb.yaml
   - external-dns.yaml
-  - minio.yaml
+  - external-secrets.yaml
+  - kyverno.yaml
