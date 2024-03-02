@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: "./infrastructure/longhorn"
+  path: ./infrastructure/longhorn
   prune: true
   validation: client
   decryption:

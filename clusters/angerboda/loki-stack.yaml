@@ -10,7 +10,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: "./infrastructure/loki-stack"
+  path: ./infrastructure/loki-stack
   prune: true
   validation: client
   patches:

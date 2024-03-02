@@ -10,6 +10,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: "./infrastructure/metallb"
+  path: ./infrastructure/metallb
   prune: true
   validation: client

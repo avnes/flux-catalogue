@@ -8,6 +8,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: "./infrastructure/chaoskube"
+  path: ./infrastructure/chaoskube
   prune: true
   validation: client

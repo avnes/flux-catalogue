@@ -8,6 +8,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: "./infrastructure/weave-scope"
+  path: ./infrastructure/weave-scope
   prune: true
   validation: client
