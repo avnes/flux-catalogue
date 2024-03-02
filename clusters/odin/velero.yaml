@@ -5,8 +5,6 @@ metadata:
   name: velero
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: minio
   interval: 1m0s
   sourceRef:
     kind: GitRepository
