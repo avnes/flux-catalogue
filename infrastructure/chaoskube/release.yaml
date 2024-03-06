@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: chaoskube
-        namespace: flux-system
+        namespace: chaoskube
   interval: 1m0s
   install:
     remediation:
