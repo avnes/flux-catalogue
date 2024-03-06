@@ -9,5 +9,4 @@ resources:
   - vmware-tanzu.yaml
   - chaoskube.yaml
   - metallb.yaml
-  - external-dns.yaml
   - kyverno.yaml
