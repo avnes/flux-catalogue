@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: longhorn-system
 resources:
   - namespace.yaml
+  - repository.yaml
   - release.yaml
   #- servicemonitor.yaml
