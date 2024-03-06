@@ -10,7 +10,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: grafana
-        namespace: flux-system
+        namespace: loki-system
   interval: 1m0s
   install:
     remediation:

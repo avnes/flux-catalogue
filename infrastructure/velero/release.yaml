@@ -9,6 +9,7 @@ spec:
       chart: velero
       sourceRef:
         kind: HelmRepository
-        name: vmware-tanzu
+        name: velero
+        namespace: velero
   interval: 1m0s
   values:
