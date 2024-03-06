@@ -10,5 +10,4 @@ resources:
   - chaoskube.yaml
   - metallb.yaml
   - external-dns.yaml
-  - external-secrets.yaml
   - kyverno.yaml
