@@ -17,7 +17,7 @@ spec:
       retries: 3
   values:
     serviceMonitor:
-      enabled: true
+      enabled: false
     service:
-      labels:
-        scrape-service-metrics: "true"
+      annotations:
+        prometheus.io/scrape: "true"
