@@ -17,12 +17,12 @@ spec:
       retries: 3
   values:
     serviceMonitor:
+      enabled: true
       selfMonitor:
         enabled: true
         labels:
-          foo: bar
+          foo: "bar"
         path: /metrics
-      enabled: false
     service:
       annotations:
         prometheus.io/scrape: "true"
