@@ -12,6 +12,8 @@ spec:
         name: metallb
         namespace: metallb-system
   values:
+    crds:
+      enabled: true
     prometheus:
       rbacPrometheus: false
       serviceMonitor:
