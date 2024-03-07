@@ -18,3 +18,11 @@ spec:
       enabled: true
       namespace: external-secrets
       honorLabels: true
+    metrics:
+      listen:
+        port: 8080
+      service:
+        enabled: true
+        port: 8080
+        annotations:
+          prometheus.io/scrape: "true"
