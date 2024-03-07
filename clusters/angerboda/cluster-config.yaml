@@ -13,3 +13,7 @@ spec:
     name: catalogue
   path: ./clusters/angerboda/config
   prune: true
+  decryption:
+    provider: sops
+    secretRef:
+      name: sops-age
