@@ -12,4 +12,3 @@ spec:
     name: catalogue
   path: ./infrastructure/blackbox-exporter
   prune: true
-  validation: client

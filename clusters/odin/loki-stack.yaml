@@ -12,4 +12,3 @@ spec:
     name: catalogue
   path: ./infrastructure/loki-stack
   prune: true
-  validation: client

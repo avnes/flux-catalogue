@@ -10,4 +10,3 @@ spec:
     name: catalogue
   path: ./infrastructure/dnsutils
   prune: true
-  validation: client

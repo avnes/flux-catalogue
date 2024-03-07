@@ -10,4 +10,3 @@ spec:
     name: catalogue
   path: ./infrastructure/velero
   prune: true
-  validation: client

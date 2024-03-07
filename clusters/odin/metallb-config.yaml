@@ -12,4 +12,3 @@ spec:
     name: catalogue
   path: ./clusters/odin/config
   prune: true
-  validation: client

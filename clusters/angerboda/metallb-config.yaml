@@ -12,4 +12,3 @@ spec:
     name: catalogue
   path: ./clusters/angerboda/config
   prune: true
-  validation: client
