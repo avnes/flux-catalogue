@@ -11,4 +11,4 @@ resources:
   - blackbox-exporter.yaml
   - loki-stack.yaml
   - metallb.yaml
-  - metallb-config.yaml
+  - cluster-config.yaml

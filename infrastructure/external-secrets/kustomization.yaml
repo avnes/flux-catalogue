@@ -5,5 +5,4 @@ resources:
   - namespace.yaml
   - repository.yaml
   - secret-sops-encrypted.yaml
-  - cluster-secret-store-sops-encrypted.yaml
   - release.yaml
