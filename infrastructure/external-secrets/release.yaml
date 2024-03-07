@@ -15,6 +15,12 @@ spec:
   values:
     installCRDS: true
     serviceMonitor:
-      enabled: true
-      namespace: external-secrets
-      honorLabels: true
+      enabled: false
+    metrics:
+      listen:
+        port: 8080
+      service:
+        enabled: true
+        port: 8080
+        annotations:
+          prometheus.io/scrape: "true"
