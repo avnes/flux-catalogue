@@ -6,6 +6,7 @@ metadata:
 spec:
   dependsOn:
     - name: longhorn
+    - name: prometheus-operator-crds
   interval: 1m0s
   sourceRef:
     kind: GitRepository

@@ -1,15 +1,15 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: metallb
+  name: blackbox-exporter
   namespace: flux-system
 spec:
   dependsOn:
-    - name: infrastructure
     - name: prometheus-operator-crds
+    - name: loki-stack
   interval: 1m0s
   sourceRef:
     kind: GitRepository
     name: catalogue
-  path: ./infrastructure/metallb
+  path: ./infrastructure/blackbox-exporter
   prune: true

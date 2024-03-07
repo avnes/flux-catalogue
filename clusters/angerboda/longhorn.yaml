@@ -6,6 +6,7 @@ metadata:
 spec:
   dependsOn:
     - name: traefik
+    - name: prometheus-operator-crds
   interval: 1m0s
   sourceRef:
     kind: GitRepository
