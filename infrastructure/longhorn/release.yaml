@@ -29,3 +29,6 @@ spec:
       tls: false
     defaultSettings:
       deletingConfirmationFlag: true
+    metrics:
+      serviceMonitor:
+        enabled: true
