@@ -25,3 +25,6 @@ spec:
     metrics:
       serviceMonitor:
         enabled: true
+    preUpgradeChecker:
+      jobEnabled: false
+      upgradeVersionCheck: false
