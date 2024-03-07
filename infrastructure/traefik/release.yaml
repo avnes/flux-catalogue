@@ -46,11 +46,6 @@ spec:
       websecure:
         expose: true
         nodePort: 32443
-      metrics:
-        port: 9100
-        expose: true
-        exposedPort: 9100
-        protocol: TCP
     globalArguments:
       - "--global.checknewversion"
       - "--entryPoints.web.forwardedHeaders.insecure"
