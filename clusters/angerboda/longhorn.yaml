@@ -18,7 +18,7 @@ spec:
       name: sops-age
   patches:
     - patch: |-
-        apiVersion: helm.toolkit.fluxcd.io/v2beta1
+        apiVersion: helm.toolkit.fluxcd.io/v2beta2
         kind: HelmRelease
         metadata:
           name: longhorn
