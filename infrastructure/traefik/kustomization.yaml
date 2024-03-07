@@ -6,4 +6,3 @@ resources:
   - repository.yaml
   - secret-sops-encrypted.yaml
   - release.yaml
-  #- middleware.yaml
