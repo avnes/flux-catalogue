@@ -20,9 +20,9 @@ spec:
       enabled: true
       selfMonitor:
         enabled: true
-        labels:
-          foo: "bar"
         path: /metrics
     service:
+      labels:
+        scrape-service-metrics: "true"
       annotations:
         prometheus.io/scrape: "true"
