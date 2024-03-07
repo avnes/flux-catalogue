@@ -14,3 +14,7 @@ spec:
   interval: 1m
   values:
     installCRDS: true
+    serviceMonitor:
+      enabled: true
+      namespace: external-secrets
+      honorLabels: true
