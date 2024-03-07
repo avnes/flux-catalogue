@@ -28,3 +28,6 @@ spec:
     preUpgradeChecker:
       jobEnabled: false
       upgradeVersionCheck: false
+    longhornManager:
+      serviceAnnotations:
+        prometheus.io/scrape: "true"
