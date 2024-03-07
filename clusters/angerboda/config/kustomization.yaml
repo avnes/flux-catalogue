@@ -3,4 +3,3 @@ kind: Kustomization
 resources:
   - metallb-pool.yaml
   - cluster-secret-store-sops-encrypted.yaml
-  - external-secret.yaml
