@@ -18,7 +18,6 @@ spec:
             - sleep
             - "infinity"
           imagePullPolicy: IfNotPresent
-          restartPolicy: Always
           resources:
             requests:
               memory: "128Mi"
