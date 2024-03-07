@@ -17,6 +17,11 @@ spec:
       retries: 3
   values:
     serviceMonitor:
+      selfMonitor:
+        enabled: true
+        labels:
+          foo: bar
+        path: /metrics
       enabled: false
     service:
       annotations:
