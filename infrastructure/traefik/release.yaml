@@ -23,10 +23,6 @@ spec:
       dashboard:
         enabled: true
         matchRule: "Host(`traefik.example.tld`) && PathPrefix(`/api`, `/dashboard`)"
-        entryPoints: ["traefik", "web"]
-        #middlewares:
-        #  - name: "traefik-dashboard-auth"
-        #    namespace: traefik
     service:
       enabled: true
       type: LoadBalancer
