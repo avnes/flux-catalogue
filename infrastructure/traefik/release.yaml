@@ -38,13 +38,16 @@ spec:
         externalTrafficPolicy: Local
     ports:
       traefik:
-        expose: true
-        nodePort: 32090
+        expose:
+          default: true
+        exposedPort: 32090
       web:
-        expose: true
+        expose:
+          default: true
         nodePort: 32080
       websecure:
-        expose: true
+        expose:
+          default: true
         nodePort: 32443
     globalArguments:
       - "--global.checknewversion"
