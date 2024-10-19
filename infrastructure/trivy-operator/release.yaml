@@ -17,3 +17,6 @@ spec:
       enabled: true
     trivy:
       ignoreUnfixed: true
+    operator:
+      labels:
+        scrape-service-metrics: "true"
