@@ -13,6 +13,8 @@ spec:
         namespace: trivy-system
   interval: 1m0s
   values:
+    service:
+      headless: false
     serviceMonitor:
       enabled: true
       namespace: trivy-system
