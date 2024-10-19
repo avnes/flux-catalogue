@@ -7,6 +7,7 @@ resources:
   - dnsutils.yaml
   - external-dns.yaml
   - external-secrets.yaml
+  - falco.yaml
   - loki-stack.yaml
   - longhorn.yaml
   - metallb.yaml
