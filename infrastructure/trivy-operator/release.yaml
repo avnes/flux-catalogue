@@ -13,3 +13,7 @@ spec:
         namespace: trivy-system
   interval: 1m0s
   values:
+    serviceMonitor:
+      enabled: true
+    trivy:
+      ignoreUnfixed: true
