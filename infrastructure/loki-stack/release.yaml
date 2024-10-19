@@ -35,11 +35,12 @@ spec:
     prometheus:
       enabled: true
       isDefault: false
-      persistentVolume:
-        enabled: true
-        accessModes:
-          - ReadWriteOnce
-        size: 2Gi
+      server:
+        persistentVolume:
+          enabled: true
+          accessModes:
+            - ReadWriteOnce
+          size: 2Gi
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
         serviceMonitorSelector: {}
