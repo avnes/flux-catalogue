@@ -15,6 +15,7 @@ spec:
   values:
     serviceMonitor:
       enabled: true
+      namespace: trivy-system
     trivy:
       ignoreUnfixed: true
     operator:
