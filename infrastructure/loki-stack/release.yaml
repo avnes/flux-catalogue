@@ -35,6 +35,10 @@ spec:
     prometheus:
       enabled: true
       isDefault: false
+      prometheusSpec:
+        serviceMonitorSelectorNilUsesHelmValues: false
+        serviceMonitorSelector: {}
+        serviceMonitorNamespaceSelector: {}
     loki:
       persistence:
         enabled: true
