@@ -35,6 +35,11 @@ spec:
     prometheus:
       enabled: true
       isDefault: false
+      persistentVolume:
+        enabled: true
+        accessModes:
+          - ReadWriteOnce
+        size: 2Gi
       prometheusSpec:
         serviceMonitorSelectorNilUsesHelmValues: false
         serviceMonitorSelector: {}
@@ -44,7 +49,7 @@ spec:
         enabled: true
         accessModes:
           - ReadWriteOnce
-        size: 5Gi
+        size: 2Gi
       service:
         labels:
           scrape-service-metrics: "true"
