@@ -20,6 +20,8 @@ spec:
       namespace: trivy-system
     trivy:
       ignoreUnfixed: true
+      labels:
+        scrape-service-metrics: "true"
     operator:
       labels:
         scrape-service-metrics: "true"
