@@ -1,14 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - blackbox-exporter.yaml
   - chaoskube.yaml
+  - cluster-config.yaml
   - dnsutils.yaml
-  - traefik.yaml
-  - longhorn.yaml
   - external-dns.yaml
   - external-secrets.yaml
-  - prometheus-operator-crds.yaml
-  - blackbox-exporter.yaml
   - loki-stack.yaml
+  - longhorn.yaml
   - metallb.yaml
-  - cluster-config.yaml
+  - prometheus-operator-crds.yaml
+  - traefik.yaml
+  - trivy-operator.yaml
