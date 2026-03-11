@@ -13,8 +13,11 @@ spec:
         namespace: loki-system
   interval: 1m0s
   install:
+    crds: CreateReplace
     remediation:
       retries: 3
+  upgrade:
+    crds: CreateReplace
   values:
     grafana:
       enabled: true

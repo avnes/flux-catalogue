@@ -11,7 +11,13 @@ spec:
         kind: HelmRepository
         name: external-secrets
         namespace: external-secrets
-  interval: 1m
+  interval: 1m0s
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    crds: CreateReplace
   values:
     installCRDS: true
     serviceMonitor:

@@ -20,4 +20,3 @@ spec:
   values:
     crds:
       enabled: true
-  interval: 1m0s

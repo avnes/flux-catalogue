@@ -12,4 +12,9 @@ spec:
         name: velero
         namespace: velero
   interval: 1m0s
-  values:
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    crds: CreateReplace
