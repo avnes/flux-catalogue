@@ -11,6 +11,7 @@ spec:
         kind: HelmRepository
         name: metallb
         namespace: metallb-system
+  interval: 1m0s
   install:
     crds: CreateReplace
     remediation:
