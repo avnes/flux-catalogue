@@ -42,6 +42,8 @@ spec:
           default: true
         exposedPort: 32090
       web:
+        forwardedHeaders:
+          insecure: true
         expose:
           default: true
         nodePort: 32080
@@ -49,11 +51,6 @@ spec:
         expose:
           default: true
         nodePort: 32443
-    globalArguments:
-      - "--global.checknewversion"
-      - "--entryPoints.web.forwardedHeaders.insecure"
-    additionalArguments:
-      - "--metrics.prometheus"
     logs:
       general:
         level: ERROR
@@ -62,6 +59,9 @@ spec:
         enabled: true
         filters:
           statuscodes: "300-399,400-499,500-599"
+    ingressClass:
+      enabled: true
+      isDefaultClass: false
     providers:
       kubernetesIngress:
         enabled: true
