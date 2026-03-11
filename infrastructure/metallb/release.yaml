@@ -11,14 +11,13 @@ spec:
         kind: HelmRepository
         name: metallb
         namespace: metallb-system
+  install:
+    crds: CreateReplace
+    remediation:
+      retries: 3
+  upgrade:
+    crds: CreateReplace
   values:
     crds:
       enabled: true
-    prometheus:
-      rbacPrometheus: false
-      serviceMonitor:
-        enabled: true
   interval: 1m0s
-  install:
-    remediation:
-      retries: 3
