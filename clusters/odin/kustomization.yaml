@@ -9,6 +9,4 @@ resources:
   - loki-stack.yaml
   - blackbox-exporter.yaml
   - dnsutils.yaml
-  - weave-scope.yaml
   - external-dns.yaml
-  - redis.yaml
