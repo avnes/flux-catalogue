@@ -36,7 +36,7 @@ sops --age=$AGE_PUBLIC_KEY --encrypt --encrypted-regex '^(data|stringData)$' sec
 Create a file called cluster-secret-store.yaml with content like this:
 
 ```yaml
-apiVersion: external-secrets.io/v1beta1
+apiVersion: external-secrets.io/v1
 kind: ClusterSecretStore
 metadata:
   name: oracle-vault
